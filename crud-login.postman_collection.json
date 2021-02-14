@@ -1,0 +1,981 @@
+{
+	"info": {
+		"_postman_id": "3239b40b-0817-45e3-b4c1-94be600c1c31",
+		"name": "crud/login",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "admin123",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{localhost}}/users",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "register fail",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "admin123",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "27"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1b-3P1OZc1Q3egVokz8vwmiMULo7EE\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 14 Feb 2021 08:16:08 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"invalid input\"\n}"
+				},
+				{
+					"name": "register success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "admin123",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "16"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"10-/VnJyQBB0+b7i4NY83P42KKVWsM\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 14 Feb 2021 08:15:43 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"ok\"\n}"
+				}
+			]
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "abcd",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "222",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{localhost}}/login",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "login fail",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "admin123",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{localhost}}/login",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "41"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"29-W55UtWPSkLA11QBvbnPl2Olwne8\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 14 Feb 2021 08:18:51 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"invalid username / password\"\n}"
+				},
+				{
+					"name": "login success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "admin123",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{localhost}}/login",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "216"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"d8-AVT+vqLKjsm858i8ovkUziMHl10\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 14 Feb 2021 08:18:26 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMjhkYzJmMmJjODhlMGNiY2U3YjFiOCIsInVzZXJuYW1lIjoiYWRtaW4xMjMiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2MTMyOTA3MDZ9.r99sXC6TqyoE5nCvhUG6CYWol4qf7i9f7cnjmIZ0veg\"\n}"
+				}
+			]
+		},
+		{
+			"name": "get data user",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "access_token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMjhkYzJmMmJjODhlMGNiY2U3YjFiOCIsInVzZXJuYW1lIjoiYWRtaW4xMjMiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2MTMyOTA3MDZ9.r99sXC6TqyoE5nCvhUG6CYWol4qf7i9f7cnjmIZ0veg",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "{{localhost}}/users",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "data user success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "access_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMjhkYzJmMmJjODhlMGNiY2U3YjFiOCIsInVzZXJuYW1lIjoiYWRtaW4xMjMiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2MTMyOTA3MDZ9.r99sXC6TqyoE5nCvhUG6CYWol4qf7i9f7cnjmIZ0veg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{localhost}}/users",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "80"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"50-UbdWCpfgyABCGVx8eLmyT80h/qs\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 14 Feb 2021 08:20:15 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user\": {\n        \"_id\": \"6028dc2f2bc88e0cbce7b1b8\",\n        \"username\": \"admin123\",\n        \"role\": \"admin\"\n    }\n}"
+				},
+				{
+					"name": "data user fail no access_token",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "access_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMjhkYzJmMmJjODhlMGNiY2U3YjFiOCIsInVzZXJuYW1lIjoiYWRtaW4xMjMiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2MTMyOTA3MDZ9.r99sXC6TqyoE5nCvhUG6CYWol4qf7i9f7cnjmIZ0veg",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{localhost}}/users",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "33"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"21-Ix+6VRqI0NR+3F4qCKmToAHBNds\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 14 Feb 2021 08:20:50 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"fail authentication\"\n}"
+				}
+			]
+		},
+		{
+			"name": "edit data user",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "access_token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMjY1YTEzNWNmMzg2MjdhNGJhZTcxYiIsInVzZXJuYW1lIjoiYWJjZCIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjEzMjkxMTM5fQ.tjcbd_Isvp94OOYLCN2x2mCLo_zfChCEdOyZ4DPd9zM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "user99",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{localhost}}/users/60265a135cf38627a4bae71b",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"users",
+						"60265a135cf38627a4bae71b"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "edit data user fail not admin",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "access_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMjY1YTEzNWNmMzg2MjdhNGJhZTcxYiIsInVzZXJuYW1lIjoiYWJjZCIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjEzMjkxMTM5fQ.tjcbd_Isvp94OOYLCN2x2mCLo_zfChCEdOyZ4DPd9zM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "user99",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{localhost}}/users/60265a135cf38627a4bae71b",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"users",
+								"60265a135cf38627a4bae71b"
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "26"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1a-uFcJ9RiXMWeHF66JNghVckzTmcM\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 14 Feb 2021 08:26:00 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"unauthorized\"\n}"
+				},
+				{
+					"name": "edit data user success",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "access_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMjhkYzJmMmJjODhlMGNiY2U3YjFiOCIsInVzZXJuYW1lIjoiYWRtaW4xMjMiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2MTMyOTA3MDZ9.r99sXC6TqyoE5nCvhUG6CYWol4qf7i9f7cnjmIZ0veg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "admin99",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{localhost}}/users/6028dc2f2bc88e0cbce7b1b8",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"users",
+								"6028dc2f2bc88e0cbce7b1b8"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "16"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"10-/VnJyQBB0+b7i4NY83P42KKVWsM\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 14 Feb 2021 08:23:46 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"ok\"\n}"
+				},
+				{
+					"name": "edit data user fail",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "access_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMjhkYzJmMmJjODhlMGNiY2U3YjFiOCIsInVzZXJuYW1lIjoiYWRtaW4xMjMiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2MTMyOTA3MDZ9.r99sXC6TqyoE5nCvhUG6CYWol4qf7i9f7cnjmIZ0veg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "admin99",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{localhost}}/users/60265a135cf38627a4bae71b",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"users",
+								"60265a135cf38627a4bae71b"
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "26"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1a-uFcJ9RiXMWeHF66JNghVckzTmcM\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 14 Feb 2021 08:24:48 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"unauthorized\"\n}"
+				}
+			]
+		},
+		{
+			"name": "delete data user",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "access_token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMjhkYzJmMmJjODhlMGNiY2U3YjFiOCIsInVzZXJuYW1lIjoiYWRtaW4xMjMiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2MTMyOTA3MDZ9.r99sXC6TqyoE5nCvhUG6CYWol4qf7i9f7cnjmIZ0veg",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "{{localhost}}/users/6028dc2f2bc88e0cbce7b1b8",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"users",
+						"6028dc2f2bc88e0cbce7b1b8"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "delete fail not admin",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "access_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMjY1YTEzNWNmMzg2MjdhNGJhZTcxYiIsInVzZXJuYW1lIjoiYWJjZCIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjEzMjkxMjI0fQ.T0GwrU_JKeTZ__rLHscjAY3qUADWhcrS_Tv5DIg0M_o",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{localhost}}/users/60265a135cf38627a4bae71b",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"users",
+								"60265a135cf38627a4bae71b"
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "26"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1a-uFcJ9RiXMWeHF66JNghVckzTmcM\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 14 Feb 2021 08:27:52 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"unauthorized\"\n}"
+				},
+				{
+					"name": "delete data user fail no access_token",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "access_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMjhkYzJmMmJjODhlMGNiY2U3YjFiOCIsInVzZXJuYW1lIjoiYWRtaW4xMjMiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2MTMyOTA3MDZ9.r99sXC6TqyoE5nCvhUG6CYWol4qf7i9f7cnjmIZ0veg",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{localhost}}/users/6028dc2f2bc88e0cbce7b1b8",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"users",
+								"6028dc2f2bc88e0cbce7b1b8"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "33"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"21-Ix+6VRqI0NR+3F4qCKmToAHBNds\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 14 Feb 2021 08:29:29 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"fail authentication\"\n}"
+				},
+				{
+					"name": "delete data user success",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "access_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMjhkYzJmMmJjODhlMGNiY2U3YjFiOCIsInVzZXJuYW1lIjoiYWRtaW4xMjMiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2MTMyOTA3MDZ9.r99sXC6TqyoE5nCvhUG6CYWol4qf7i9f7cnjmIZ0veg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{localhost}}/users/6028dc2f2bc88e0cbce7b1b8",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"users",
+								"6028dc2f2bc88e0cbce7b1b8"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "16"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"10-/VnJyQBB0+b7i4NY83P42KKVWsM\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 14 Feb 2021 08:28:41 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"ok\"\n}"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "localhost",
+			"value": "http://localhost:3000"
+		}
+	]
+}

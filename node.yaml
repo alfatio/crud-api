@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodejs-deployment
+spec:
+  replicas: 4
+  template:
+    metadata:
+      labels:
+        app: nodejs
+    spec:
+      containers:
+      - name: mainapi
+        image: alfatio/mainapi
+        ports:
+        - containerPort: 3000
+      - name: crudapi
+        image: alfatio/crudapi
+        ports:
+        - containerPort: 3001
+      - name: loginapi
+        image: alfatio/loginapi
+        ports:
+        - containerPort: 3002
+      - name: db
+        image: mongo
+        ports:
+        - port: 27017
+          targetPort: 27017
